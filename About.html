@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="about.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f4ede4, #f6d7b8);
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Wrapper */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Left Image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #7a4d00;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Right Content */
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    color: #7a4d00;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-content p span {
+    color: #7a4d00;
+    font-weight: 600;
+}
+
+/* Details */
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.about-details div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.about-details i {
+    color: #7a4d00;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #7a4d00;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #5e3a00;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    animation: fadeDown 1s ease-in-out;
+}
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #7a4d00;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7a4d00;
+}
+
+.contact-btn {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #7a4d00;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #d39529;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Devayani</div>
+    <nav>
+        <a href="Index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Skill.html">Skills</a>
+        <a href="Service.html">Services</a>
+        <a href="Blogs.html">Blogs</a>
+        <button class="contact-btn"><a href="Contact.html">Contact Us</a></button>
+    </nav>
+</header>
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-wrapper">
+
+            <!-- Left Side: Image -->
+            <div class="about-image">
+                <img src="C:\Users\dhula\Desktop\Pictures\Saved Pictures\myself.jpg" alt="Profile Picture">
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>
+                    Hi! I’m <span>Devayani</span>, a passionate web developer with experience in building modern, responsive, and user-friendly websites. 
+                    I enjoy turning ideas into interactive digital experiences and constantly learning new technologies to improve my skills.
+                </p>
+
+                <p>
+                    I specialize in frontend development using HTML, CSS, JavaScript, and React. 
+                    When I’m not coding, I enjoy designing creative projects and exploring new tech trends.
+                </p>
+
+                <div class="about-details">
+                    <div><i class="fas fa-user"></i> Age: 22</div>
+                    <div><i class="fas fa-map-marker-alt"></i> Location: Kolhapur, India</div>
+                    <div><i class="fas fa-envelope"></i> Email: deva@gmail.com   </div>
+                    <div><i class="fas fa-phone"></i> Phone:+919922219134 </div>
+                </div>
+
+                <!-- <a href="cv.pdf" download class="download-btn"><i class="fa fa-download"></i> Download CV</a> -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
