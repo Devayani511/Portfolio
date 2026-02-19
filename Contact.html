@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="contact.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f4ede4, #f6d7b8);
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.contact-container {
+    display: flex;
+    background: #fff;
+    width: 900px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Left Side */
+.contact-info {
+    flex: 1;
+    background: #7a4d00;
+    color: #fff;
+    padding: 40px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-box i {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Right Side */
+.contact-form {
+    flex: 1;
+    padding: 40px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    resize: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label {
+    top: -12px;
+    font-size: 12px;
+    color: #7a4d00;
+}
+
+/* Button */
+.send-btn {
+    padding: 12px 25px;
+    background: #7a4d00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #5e3a00;
+    transform: translateY(-5px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    animation: fadeDown 1s ease-in-out;
+}
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #7a4d00;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7a4d00;
+}
+
+.contact-btn {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #7a4d00;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #d39529;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">Devayani</div>
+    <nav>
+        <a href="Portfolio.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="service.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <button class="contact-btn"><a href="contact us.html">Contact Us</a></button>
+    </nav>
+</header>
+
+<section class="contact">
+    <div class="contact-container">
+
+        <!-- Left Side -->
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <span>your@email.com</span>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <span>+123 456 7890</span>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-location-dot"></i>
+                <span>Your City, Country</span>
+            </div>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="contact-form">
+            <form>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="input-box">
+                    <textarea required></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
